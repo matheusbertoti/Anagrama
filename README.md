@@ -1,2 +1,2 @@
 # Anagrama
- Projeto criacao de anagrama
+ Projeto de criacao de um anagrama 
