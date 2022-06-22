@@ -33,13 +33,22 @@ from itertools import permutations
 palavra = input('Digite uma palavra :')
 
 # Definindo o tamanho da palavra
-tamanho_palavra = int(input('Com quantos algarismos quer o abagrama? '))
+tamanho_palavra = int(input('Com quantos algarismos quer o anagrama? '))
 
 # Separando as letras da palavra em uma lista
 letras = sorted(palavra)
+
+# Removendo espaços vazios na lista de letras
+while ' ' in letras:
+    letras.remove(' ')
+
+
 print(letras)
 
 # criando permutacoes da palavra digitada
+resultado = []
 possibilidades = permutations(letras,tamanho_palavra)
 for i in list(possibilidades):
-    print(i)
+    resultado.append(i)
+print(resultado)
+
