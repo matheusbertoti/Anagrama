@@ -32,10 +32,14 @@ from itertools import permutations
 # Inserindo a palavra que sera usada para gerar os anagramas
 palavra = input('Digite uma palavra :')
 
-# Separando as letras da palavra
+# Definindo o tamanho da palavra
+tamanho_palavra = int(input('Com quantos algarismos quer o abagrama? '))
+
+# Separando as letras da palavra em uma lista
 letras = sorted(palavra)
 print(letras)
 
-
-possibilidades = permutations(letras)
-# print(possibilidades)
+# criando permutacoes da palavra digitada
+possibilidades = permutations(letras,tamanho_palavra)
+for i in list(possibilidades):
+    print(i)
