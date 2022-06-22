@@ -54,5 +54,4 @@ for i in list(possibilidades):
         resultado.append(i)
     else: 
         skip
-print(len(resultado))
-
+print('Total de possibilidades: ' + str(len(resultado)))
