@@ -28,6 +28,7 @@ z = 26
 
 # Importanto as bibliotecas necessarias
 from itertools import permutations
+from unittest import skip
 
 # Inserindo a palavra que sera usada para gerar os anagramas
 palavra = input('Digite uma palavra :')
@@ -49,6 +50,9 @@ print(letras)
 resultado = []
 possibilidades = permutations(letras,tamanho_palavra)
 for i in list(possibilidades):
-    resultado.append(i)
-print(resultado)
+    if i not in resultado:    
+        resultado.append(i)
+    else: 
+        skip
+print(len(resultado))
 
