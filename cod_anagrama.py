@@ -49,12 +49,11 @@ lista_de_palavras = open('dicionario_pt-br.txt', "r", encoding='utf-8')
 dicionario = []
 for line in lista_de_palavras:
     dicionario.append(line.strip())
+# print(dicionario[4])
 
 
 # criando permutacoes da palavra digitada
 resultado = []
-resultado_real = []
-
 possibilidades = permutations(letras,tamanho_palavra)
 for i in list(possibilidades):
     if i not in resultado:    
@@ -62,11 +61,16 @@ for i in list(possibilidades):
     else: 
         skip
 print('Total de possibilidades: ' + str(len(resultado)))
+if 'amar' in resultado:
+    print('SIIIIIIM')
+else:
+    print('NAO')
+print(resultado)
 
-for i in resultado:
-    if i in dicionario:
-       resultado_real.append(i)
-    else:
-       skip
-    resultado_real.append(i)
-print('Total de possibilidades reais: ' + str(len(resultado_real)))
+# resultado_real = []
+# for x in resultado:
+#     if x in dicionario:
+#        resultado_real.append(x)
+#     else:
+#        skip
+# print('Total de possibilidades reais: ' + str(len(resultado_real)))
