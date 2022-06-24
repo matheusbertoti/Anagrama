@@ -1,0 +1,69 @@
+# # Codificando letras para numeros (ordem alfabetica)
+# a = 1
+# b = 2
+# c = 3
+# d = 4
+# e = 5
+# f = 6
+# g = 7
+# h = 8
+# i = 9
+# j = 10
+# k = 11
+# l = 12
+# m = 13
+# n = 14
+# o = 15
+# p = 16
+# q = 17
+# r = 18
+# s = 19
+# t = 20
+# u = 21
+# v = 22
+# w = 23
+# x = 24
+# y = 25
+# z = 26
+
+from itertools import permutations
+from unittest import skip
+
+palavra = ('TESTE')
+tamanho_palavra = int(5)
+letras_sep = sorted(palavra)
+
+
+while ' ' in letras_sep:
+    letras_sep.remove(' ')
+print(letras_sep)
+
+letras = ''.join(letras_sep)
+letras = str(letras)
+print(letras)
+
+
+resultado = []
+
+# # RESULTADO EM TUPLAS
+# possibilidades = permutations(letras,tamanho_palavra)
+# for i in possibilidades:
+#     if i not in resultado:    
+#         resultado.append(i)
+#     else: 
+#         skip
+# print(resultado)
+
+def anagrama(x):
+    possibilidades = permutations(letras,tamanho_palavra)
+    for i in possibilidades:
+        if i not in resultado:
+            i = ''.join(i)
+            resultado.append(i)
+        else:
+            skip
+x = letras
+anagrama(x)
+print(resultado)
+
+
