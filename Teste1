@@ -29,7 +29,7 @@
 from itertools import permutations
 from unittest import skip
 
-palavra = ('TESTE')
+palavra = ('teste')
 tamanho_palavra = int(5)
 letras_sep = sorted(palavra)
 
@@ -45,14 +45,6 @@ print(letras)
 
 resultado = []
 
-# # RESULTADO EM TUPLAS
-# possibilidades = permutations(letras,tamanho_palavra)
-# for i in possibilidades:
-#     if i not in resultado:    
-#         resultado.append(i)
-#     else: 
-#         skip
-# print(resultado)
 
 def anagrama(x):
     possibilidades = permutations(letras,tamanho_palavra)
@@ -65,5 +57,12 @@ def anagrama(x):
 x = letras
 anagrama(x)
 print(resultado)
+
+if 'teste' in resultado:
+    print('SIIIIIIM')
+else:
+    print('NAO')
+
+
 
 
