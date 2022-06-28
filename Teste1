@@ -29,8 +29,8 @@
 from itertools import permutations
 from unittest import skip
 
-palavra = ('NADALPARIS')
-tamanho_palavra = int(10)
+palavra = ('TESTE')
+tamanho_palavra = int(5)
 letras_sep = sorted(palavra)
 
 
